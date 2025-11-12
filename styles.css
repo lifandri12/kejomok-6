@@ -1,0 +1,2 @@
+/* Root stylesheet that forwards to the project CSS in css/style.css */
+@import url('css/style.css');

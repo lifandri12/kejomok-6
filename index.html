@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tim InnovateIT - President University 2025</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="assets/img/gian.svg" type="image/svg+xml">
+    </head>
+    <body class="bg-gray-50">
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-2">
+                        <i
+                            class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                        <span
+                            class="text-xl font-bold text-gray-800">InnovateIT</span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="index.html"
+                            class="text-gray-700 hover:text-blue-600 transition">Beranda</a>
+                        <a href="#tim"
+                            class="text-gray-700 hover:text-blue-600 transition">Tim</a>
+                    </div>
+                    <button class="md:hidden text-gray-700"
+                        onclick="toggleMenu()" aria-label="Toggle navigation"
+                        aria-expanded="false" title="Toggle navigation">
+                        <span class="sr-only">Menu</span>
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobileMenu" class="hidden md:hidden pb-4">
+                    <a href="index.html"
+                        class="block py-2 text-gray-700 hover:text-blue-600">Beranda</a>
+                    <a href="#tim"
+                        class="block py-2 text-gray-700 hover:text-blue-600">Tim</a>
+                </div>
+            </div>
+        </nav>
+
+        <header
+            class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 px-4 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <div
+                    class="absolute top-10 left-10 w-32 h-32 bg-blue-600 rounded-full blur-xl"></div>
+                <div
+                    class="absolute bottom-10 right-10 w-48 h-48 bg-indigo-600 rounded-full blur-xl"></div>
+                <div
+                    class="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-700 rounded-full blur-lg"></div>
+            </div>
+            <div class="container mx-auto relative z-10">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h1
+                            class="text-4xl md:text-5xl font-bold mb-4 fade-in text-white drop-shadow-lg">Tim
+                            InnovateIT</h1>
+                        <p class="text-xl mb-6 text-blue-100">President
+                            University Pekanbaru • 2025</p>
+                        <p class="mb-8 text-gray-200 leading-relaxed">
+                            Kami adalah tim mahasiswa IT yang
+                            siap menghadirkan inovasi digital
+                            untuk masa depan yang lebih baik.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#tim"
+                                class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                                <i class="fas fa-users mr-2"></i>Met Tim Kami
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <div
+                            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <i class="fas fa-users text-3xl mb-2"></i>
+                                    <p class="text-2xl font-bold">5</p>
+                                    <p class="text-sm">Anggota</p>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <i
+                                        class="fas fa-project-diagram text-3xl mb-2"></i>
+                                    <p class="text-2xl font-bold">∞</p>
+                                    <p class="text-sm">Proyek</p>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <i class="fas fa-code text-3xl mb-2"></i>
+                                    <p class="text-2xl font-bold">5</p>
+                                    <p class="text-sm">Teknologi</p>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <i class="fas fa-award text-3xl mb-2"></i>
+                                    <p class="text-2xl font-bold">∞</p>
+                                    <p class="text-sm">Penghargaan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="bg-white py-8 shadow-sm">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div>
+                        <p class="text-3xl font-bold text-blue-600">2025</p>
+                        <p class="text-gray-600">Angkatan</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-blue-600">IT</p>
+                        <p class="text-gray-600">Jurusan</p>
+                    </div>
+                    <div>
+                        <p
+                            class="text-3xl font-bold text-blue-600">Pekanbaru</p>
+                        <p class="text-gray-600">Kampus</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-blue-600">Inovasi</p>
+                        <p class="text-gray-600">Fokus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-16 fade-in">
+                <div
+                    class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border-l-4 border-blue-600">
+                    <i
+                        class="fas fa-quote-left text-blue-600 text-2xl mb-4"></i>
+                    <p class="text-xl text-gray-700 italic font-medium">
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus mollitia aliquid a aliquam totam aperiam exercitationem eaque non excepturi, nesciunt fugiat nobis quam quibusdam vitae odio et debitis? Cum, placeat?."
+                    </p>
+                    <p class="text-sm text-gray-500 mt-4">- Motivasi Tim
+                        InnovateIT</p>
+                </div>
+            </section>
+            <section class="mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                    <span class="gradient-text">Tentang Kami</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">
+                            <i
+                                class="fas fa-bullseye text-blue-600 mr-2"></i>Visi
+                            Kami
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Illo,
+                            adipisci obcaecati molestias nemo accusamus unde ad
+                            debitis sit quae. Ullam culpa quo laboriosam quaerat
+                            eligendi expedita aperiam. Autem, dolorem
+                            nostrum?</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover-lift">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">
+                            <i class="fas fa-tasks text-blue-600 mr-2"></i>Misi
+                            Kami
+                        </h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Mengembangkan skill teknologi sesuai
+                                    perkembangan industri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Berkolaborasi dalam project yang
+                                    bermanfaat</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Membangun networking dengan komunitas
+                                    IT</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="tim" class="mb-16 fade-in-delay">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                    <span class="gradient-text">Anggota Kelompok</span>
+                </h2>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gian -->
+                    <a href="gian.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover-lift">
+                            <div
+                                class="bg-gradient-to-r from-blue-500 to-blue-600 h-32 flex items-center justify-center">
+                                <img src="assets/img/gian.svg" alt="Gian avatar"
+                                    class="w-20 h-20 rounded-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="font-semibold text-gray-800 text-lg group-hover:text-blue-600 transition">Gian</h3>
+                                <p class="text-sm text-gray-500 mt-1">Team
+                                    Leader</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Leadership</span>
+                                    <span
+                                        class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded">Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Dedek -->
+                    <a href="dedek.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover-lift">
+                            <div
+                                class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
+                                <img src="assets/img/dedek.svg"
+                                    alt="Dedek avatar"
+                                    class="w-20 h-20 rounded-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="font-semibold text-gray-800 text-lg group-hover:text-blue-600 transition">Dedek</h3>
+                                <p
+                                    class="text-sm text-gray-500 mt-1">Developer</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">JavaScript</span>
+                                    <span
+                                        class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded">PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Clara -->
+                    <a href="clara.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover-lift">
+                            <div
+                                class="bg-gradient-to-r from-pink-500 to-pink-600 h-32 flex items-center justify-center">
+                                <img src="assets/img/clara.svg"
+                                    alt="Clara avatar"
+                                    class="w-20 h-20 rounded-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="font-semibold text-gray-800 text-lg group-hover:text-blue-600 transition">Clara</h3>
+                                <p
+                                    class="text-sm text-gray-500 mt-1">Members</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs bg-pink-100 text-pink-600 px-2 py-1 rounded">Membership</span>
+                                    <span
+                                        class="text-xs bg-indigo-100 text-indigo-600 px-2 py-1 rounded">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Margareth -->
+                    <a href="margareth.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover-lift">
+                            <div
+                                class="bg-gradient-to-r from-purple-500 to-purple-600 h-32 flex items-center justify-center">
+                                <img src="assets/img/margareth.svg"
+                                    alt="Margareth avatar"
+                                    class="w-20 h-20 rounded-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="font-semibold text-gray-800 text-lg group-hover:text-blue-600 transition">Margareth</h3>
+                                <p
+                                    class="text-sm text-gray-500 mt-1">Members</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded">Membership</span>
+                                    <span
+                                        class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trisna -->
+                    <a href="trisna.html" class="group">
+                        <div
+                            class="bg-white rounded-xl shadow-md overflow-hidden hover-lift">
+                            <div
+                                class="bg-gradient-to-r from-teal-500 to-teal-600 h-32 flex items-center justify-center">
+                                <img src="assets/img/trina.svg"
+                                    alt="Trina avatar"
+                                    class="w-20 h-20 rounded-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3
+                                    class="font-semibold text-gray-800 text-lg group-hover:text-blue-600 transition">Trisna</h3>
+                                <p
+                                    class="text-sm text-gray-500 mt-1">Members</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="text-xs bg-teal-100 text-teal-600 px-2 py-1 rounded">Membership</span>
+                                    <span
+                                        class="text-xs bg-cyan-100 text-cyan-600 px-2 py-1 rounded">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="relative bg-black text-gray-300 py-10">
+            <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2
+                    class="text-xl md:text-2xl font-bold text-white mb-2 tracking-wide hover:text-blue-400 transition duration-300">
+                    Kelompok IT President University 2025
+                </h2>
+
+                <p class="text-sm md:text-base text-gray-400 italic mb-4">
+                    “We code, we create, we grow — together.”
+                </p>
+
+                <div class="border-t border-gray-700 my-5 w-2/3 mx-auto"></div>
+
+                <p
+                    class="text-xs md:text-sm text-gray-500 hover:text-gray-300 transition duration-300">
+                    &copy; 2025 Tim InnovateIT — Gian, Dedek, Clara, Margareth,
+                    dan Trisna.
+                    <br class="md:hidden" /> All rights reserved.
+                </p>
+            </div>
+            <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        </footer>
+
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            const btn = document.querySelector('button[aria-label="Toggle navigation"]');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
+        }
+    </script>
+    </body>
+</html>

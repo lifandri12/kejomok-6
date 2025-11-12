@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clara - Designer | InnovateIT</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="assets/img/clara.svg" type="image/svg+xml">
+    </head>
+    <body class="bg-gray-50">
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-2">
+                        <i
+                            class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                        <span
+                            class="text-xl font-bold text-gray-800">InnovateIT</span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="index.html"
+                            class="text-gray-700 hover:text-blue-600 transition">Beranda</a>
+                        <a href="clara.html"
+                            class="text-blue-600 font-semibold">Profil</a>
+                        <a href="#kontak"
+                            class="text-gray-700 hover:text-blue-600 transition">Kontak</a>
+                    </div>
+                    <button class="md:hidden text-gray-700"
+                        onclick="toggleMenu()" aria-label="Toggle navigation"
+                        aria-expanded="false" title="Toggle navigation">
+                        <span class="sr-only">Menu</span>
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <header
+            class="bg-gradient-to-br from-pink-600 to-purple-800 text-white py-16 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div
+                        class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm overflow-hidden">
+                        <img src="assets/img/clara.svg" alt="Clara avatar"
+                            class="w-32 h-32 rounded-full object-cover">
+                    </div>
+ <div class="text-center md:text-left">
+  <h1 class="text-4xl font-bold mb-2">Clara</h1>
+  <p class="text-xl mb-4 text-pink-100">IT Student</p>
+  <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+      <span class="bg-white/20 px-3 py-1 rounded-full text-sm">HTML</span>
+      <span class="bg-white/20 px-3 py-1 rounded-full text-sm">CSS</span>
+      <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Basic Design</span>
+  </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Tentang
+                    Saya</h2>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">
+                        <i
+                            class="fas fa-user-graduate text-pink-600 mr-2"></i>Pendidikan
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold">President University</p>
+                            <p class="text-gray-600">S1 Teknik informatika
+                                (2025 - Sekarang)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <p class="mb-4">© 2025 Clara - InnovateIT Team</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="index.html"
+                        class="hover:text-pink-400 transition">← Kembali ke
+                        Beranda</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            const btn = document.querySelector('button[aria-label="Toggle navigation"]');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
+        }
+    </script>
+    </body>
+</html>

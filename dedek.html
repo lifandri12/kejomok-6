@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dedek - Developer | InnovateIT</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="assets/img/dedek.svg" type="image/svg+xml">
+    </head>
+    <body class="bg-gray-50">
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-2">
+                        <i
+                            class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                        <span
+                            class="text-xl font-bold text-gray-800">InnovateIT</span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="index.html"
+                            class="text-gray-700 hover:text-blue-600 transition">Beranda</a>
+                        <a href="dedek.html"
+                            class="text-blue-600 font-semibold">Profil</a>
+                        <a href="#kontak"
+                            class="text-gray-700 hover:text-blue-600 transition">Kontak</a>
+                    </div>
+                    <button class="md:hidden text-gray-700"
+                        onclick="toggleMenu()" aria-label="Toggle navigation"
+                        aria-expanded="false" title="Toggle navigation">
+                        <span class="sr-only">Menu</span>
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <header
+            class="bg-gradient-to-br from-green-600 to-green-800 text-white py-16 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div
+                        class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm overflow-hidden">
+                        <img src="assets/img/dedek.svg" alt="Dedek avatar"
+                            class="w-32 h-32 rounded-full object-cover">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl font-bold mb-2">Dedek</h1>
+                        <p class="text-xl mb-4 text-green-100">Full Stack
+                            Developer</p>
+                        <div
+                            class="flex flex-wrap gap-3 justify-center md:justify-start">
+                            <span
+                                class="bg-white/20 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span
+                                class="bg-white/20 px-3 py-1 rounded-full text-sm">PHP</span>
+                            <span
+                                class="bg-white/20 px-3 py-1 rounded-full text-sm">GYMRAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Tentang
+                    Saya</h2>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Saya adalah seorang developer yang passionate tentang
+                        teknologi dan pemrograman.
+                        Dengan pengalaman dalam berbagai bahasa pemrograman dan
+                        framework, saya siap
+                        menghadapi tantangan pengembangan software yang
+                        kompleks.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3
+                                class="text-xl font-semibold mb-4 text-gray-800">
+                                <i
+                                    class="fas fa-code text-green-600 mr-2"></i>Teknologi
+                                Favorit
+                            </h3>
+                            <div class="space-y-2">
+                                <p>• HTML, CSS, dan Tailwind CSS</p>
+                                <p>• JavaScript & TypeScript</p>
+                                <p>• React & Next.js</p>
+                                <p>• PHP & Laravel Framework</p>
+                                <p>• Node.js & Express</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3
+                                class="text-xl font-semibold mb-4 text-gray-800">
+                                <i
+                                    class="fas fa-tools text-green-600 mr-2"></i>Tools
+                                & Framework
+                            </h3>
+                            <div class="space-y-2">
+                                <p>• Git & GitHub</p>
+                                <p>• Docker & Kubernetes</p>
+                                <p>• AWS & Cloud Services</p>
+                                <p>• MongoDB & PostgreSQL</p>
+                                <p>• Laragon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="kontak" class="mb-16">
+                <div
+                    class="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <i class="fab fa-github text-4xl mb-3"></i>
+                            <p class="font-semibold">GitHub</p>
+                            <p class="text-green-100">@lifandri12</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fab fa-linkedin text-4xl mb-3"></i>
+                            <p class="font-semibold">LinkedIn</p>
+                            <p class="text-green-100">M.Ridho Lifandri</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-envelope text-4xl mb-3"></i>
+                            <p class="font-semibold">Email</p>
+                            <p class="text-green-100">muhammad.lifandri@student.president.ac.id</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center">
+                <p class="mb-4">© 2025 Dedek - InnovateIT Team</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="index.html"
+                        class="hover:text-green-400 transition">← Kembali ke
+                        Beranda</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            const btn = document.querySelector('button[aria-label="Toggle navigation"]');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
+        }
+    </script>
+    </body>
+</html>
