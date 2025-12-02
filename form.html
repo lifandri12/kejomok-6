@@ -81,6 +81,10 @@
                 justify-content: center;
             }
 
+            .success-message.hidden {
+                display: none;
+            }
+
             .btn-group {
                 display: flex;
                 gap: 1rem;
@@ -104,13 +108,13 @@
             }
 
             .btn-submit {
-                background-color: #3b82f6;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 color: white;
             }
 
             .btn-submit:hover {
-                background-color: #2563eb;
                 transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
             }
 
             .btn-reset {
@@ -140,24 +144,46 @@
                 margin-left: 0.75rem;
                 color: #374151;
                 cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
                 user-select: none;
             }
 
             .header-form {
-                background: linear-gradient(to bottom right, #1e3a8a, #1e40af, #4f46e5);
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 color: white;
-                padding: 4rem 1rem;
+                padding: 3rem 1rem;
             }
 
             .header-form h1 {
-                font-size: 2.25rem;
+                font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
+                color: white;
             }
 
             .header-form p {
                 font-size: 1.125rem;
-                opacity: 0.9;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            .password-toggle {
+                position: absolute;
+                right: 0.75rem;
+                top: 0.75rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            .textarea-resize {
+                resize: none;
+            }
+
+            .relative-container {
+                position: relative;
             }
         </style>
     </head>
@@ -187,12 +213,12 @@
             </div>
         </nav>
 
-        <header class="header-form" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 1rem;">
+        <header class="header-form">
             <div class="container mx-auto">
-                <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: white;">
+                <h1>
                     <i class="fas fa-clipboard-list mr-2"></i>Formulir
                 </h1>
-                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.9);">Isi form dengan lengkap dan benar</p>
+                <p>Isi form dengan lengkap dan benar</p>
             </div>
         </header>
 
@@ -224,7 +250,7 @@
                             <label for="password" class="form-label">
                                 <i class="fas fa-lock text-blue-600 mr-2"></i>Password
                             </label>
-                            <div class="relative" style="position: relative;">
+                            <div class="relative-container">
                                 <input 
                                     type="password" 
                                     id="password" 
@@ -234,7 +260,7 @@
                                     required
                                     minlength="6"
                                 >
-                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 transition" onclick="togglePassword()" title="Toggle password visibility" aria-label="Toggle password visibility" style="position: absolute; right: 0.75rem; top: 0.75rem; background: none; border: none; cursor: pointer; padding: 0.5rem;">
+                                <button type="button" class="password-toggle text-gray-500 hover:text-gray-700 transition" onclick="togglePassword()" title="Toggle password visibility" aria-label="Toggle password visibility">
                                     <span class="sr-only">Lihat/Sembunyikan Password</span>
                                     <i class="fas fa-eye" id="passwordToggle" aria-hidden="true"></i>
                                 </button>
@@ -252,10 +278,9 @@
                                 name="message"
                                 placeholder="Tulis pesan Anda di sini... (minimal 10 karakter)"
                                 rows="5"
-                                class="form-textarea"
+                                class="form-textarea textarea-resize"
                                 required
                                 minlength="10"
-                                style="resize: none;"
                             ></textarea>
                             <span class="error-text hidden" id="messageError"></span>
                         </div>
@@ -374,14 +399,12 @@
                                 type="submit" 
                                 class="btn btn-submit"
                                 id="submitBtn"
-                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
                             >
                                 <i class="fas fa-paper-plane"></i>Submit
                             </button>
                             <button 
                                 type="reset" 
                                 class="btn btn-reset"
-                                style="background-color: #6b7280;"
                             >
                                 <i class="fas fa-redo"></i>Reset
                             </button>
@@ -389,7 +412,7 @@
                     </form>
 
                     <!-- Success Message dengan TAG CSS + Inline CSS -->
-                    <div id="successMessage" class="success-message hidden" style="display: none; background-color: #d1fae5; border-color: #6ee7b7; color: #065f46;">
+                    <div id="successMessage" class="success-message hidden">
                         <i class="fas fa-check-circle"></i>
                         <span>Form berhasil dikirim!</span>
                     </div>
