@@ -5,189 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulir - InnovateIT</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="assets/css/form-styles.css">
         <link rel="icon" href="assets/img/gian.svg" type="image/svg+xml">
-        
-        <!-- TAG CSS (Internal Stylesheet) -->
-        <style>
-            /* Style untuk form container */
-            .form-card {
-                background-color: white;
-                border-radius: 1rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                padding: 2rem;
-            }
-
-            /* Style untuk form group */
-            .form-group {
-                margin-bottom: 1.5rem;
-            }
-
-            .form-label {
-                display: block;
-                font-size: 0.875rem;
-                font-weight: 600;
-                color: #374151;
-                margin-bottom: 0.5rem;
-            }
-
-            .form-input,
-            .form-textarea,
-            .form-select {
-                width: 100%;
-                padding: 0.75rem 1rem;
-                border: 1px solid #d1d5db;
-                border-radius: 0.5rem;
-                font-family: inherit;
-                font-size: 1rem;
-                transition: all 0.3s ease;
-            }
-
-            .form-input:focus,
-            .form-textarea:focus,
-            .form-select:focus {
-                outline: none;
-                border-color: #3b82f6;
-                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-            }
-
-            .form-input.error,
-            .form-textarea.error,
-            .form-select.error {
-                border-color: #ef4444;
-                background-color: #fee2e2;
-            }
-
-            .error-text {
-                display: block;
-                color: #ef4444;
-                font-size: 0.875rem;
-                margin-top: 0.25rem;
-            }
-
-            .success-message {
-                background-color: #d1fae5;
-                border: 1px solid #6ee7b7;
-                color: #065f46;
-                padding: 1rem;
-                border-radius: 0.5rem;
-                margin-top: 1.5rem;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                justify-content: center;
-            }
-
-            .success-message.hidden {
-                display: none;
-            }
-
-            .btn-group {
-                display: flex;
-                gap: 1rem;
-                padding-top: 1rem;
-                margin-top: 1rem;
-            }
-
-            .btn {
-                flex: 1;
-                padding: 0.75rem 1.5rem;
-                border: none;
-                border-radius: 0.5rem;
-                font-size: 1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem;
-            }
-
-            .btn-submit {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-            }
-
-            .btn-submit:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-            }
-
-            .btn-reset {
-                background-color: #6b7280;
-                color: white;
-            }
-
-            .btn-reset:hover {
-                background-color: #4b5563;
-                transform: translateY(-2px);
-            }
-
-            .radio-group,
-            .checkbox-group {
-                margin-top: 0.5rem;
-            }
-
-            .radio-item,
-            .checkbox-item {
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.5rem;
-            }
-
-            .radio-item label,
-            .checkbox-item label {
-                margin-left: 0.75rem;
-                color: #374151;
-                cursor: pointer;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            .header-form {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 3rem 1rem;
-            }
-
-            .header-form h1 {
-                font-size: 2.5rem;
-                font-weight: 700;
-                margin-bottom: 1rem;
-                color: white;
-            }
-
-            .header-form p {
-                font-size: 1.125rem;
-                color: rgba(255, 255, 255, 0.9);
-            }
-
-            .password-toggle {
-                position: absolute;
-                right: 0.75rem;
-                top: 0.75rem;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0.5rem;
-            }
-
-            .textarea-resize {
-                resize: none;
-            }
-
-            .relative-container {
-                position: relative;
-            }
-        </style>
     </head>
     <body class="bg-gray-50">
+        <!-- Navigation -->
         <nav class="bg-white shadow-lg sticky top-0 z-50">
             <div class="container mx-auto px-4">
                 <div class="flex justify-between items-center py-4">
@@ -213,6 +37,7 @@
             </div>
         </nav>
 
+        <!-- Header -->
         <header class="header-form">
             <div class="container mx-auto">
                 <h1>
@@ -222,13 +47,13 @@
             </div>
         </header>
 
+        <!-- Main Content -->
         <main class="container mx-auto px-4 py-12">
             <div class="max-w-2xl mx-auto">
-                <!-- Form Card dengan TAG CSS -->
                 <div class="form-card">
                     <form id="contactForm" class="space-y-6" novalidate>
                         
-                        <!-- (a) TEXT INPUT dengan TAG CSS -->
+                        <!-- Full Name Input -->
                         <div class="form-group">
                             <label for="fullName" class="form-label">
                                 <i class="fas fa-user text-blue-600 mr-2"></i>Nama Lengkap
@@ -245,7 +70,7 @@
                             <span class="error-text hidden" id="fullNameError"></span>
                         </div>
 
-                        <!-- (b) PASSWORD dengan TAG CSS + Inline CSS -->
+                        <!-- Password Input with Toggle -->
                         <div class="form-group">
                             <label for="password" class="form-label">
                                 <i class="fas fa-lock text-blue-600 mr-2"></i>Password
@@ -268,7 +93,7 @@
                             <span class="error-text hidden" id="passwordError"></span>
                         </div>
 
-                        <!-- (c) TEXT AREA dengan TAG CSS -->
+                        <!-- Message Textarea -->
                         <div class="form-group">
                             <label for="message" class="form-label">
                                 <i class="fas fa-comment text-blue-600 mr-2"></i>Pesan
@@ -285,7 +110,7 @@
                             <span class="error-text hidden" id="messageError"></span>
                         </div>
 
-                        <!-- (d) RADIO BUTTONS dengan TAG CSS -->
+                        <!-- Gender Radio Buttons -->
                         <div class="form-group">
                             <label class="form-label">
                                 <i class="fas fa-venus-mars text-blue-600 mr-2"></i>Jenis Kelamin
@@ -316,7 +141,7 @@
                             <span class="error-text hidden" id="genderError"></span>
                         </div>
 
-                        <!-- (d) CHECKBOX dengan TAG CSS -->
+                        <!-- Interest Checkboxes -->
                         <div class="form-group">
                             <label class="form-label">
                                 <i class="fas fa-tasks text-blue-600 mr-2"></i>Minat (Pilih minimal 1)
@@ -356,7 +181,7 @@
                             <span class="error-text hidden" id="interestsError"></span>
                         </div>
 
-                        <!-- (e) SELECT/DROPDOWN dengan TAG CSS -->
+                        <!-- Country Select -->
                         <div class="form-group">
                             <label for="country" class="form-label">
                                 <i class="fas fa-globe text-blue-600 mr-2"></i>Negara
@@ -377,7 +202,7 @@
                             <span class="error-text hidden" id="countryError"></span>
                         </div>
 
-                        <!-- EMAIL dengan TAG CSS -->
+                        <!-- Email Input -->
                         <div class="form-group">
                             <label for="email" class="form-label">
                                 <i class="fas fa-envelope text-blue-600 mr-2"></i>Email
@@ -393,7 +218,7 @@
                             <span class="error-text hidden" id="emailError"></span>
                         </div>
 
-                        <!-- (f)(g) BUTTONS dengan TAG CSS + Inline CSS -->
+                        <!-- Submit & Reset Buttons -->
                         <div class="btn-group">
                             <button 
                                 type="submit" 
@@ -411,7 +236,7 @@
                         </div>
                     </form>
 
-                    <!-- Success Message dengan TAG CSS + Inline CSS -->
+                    <!-- Success Message -->
                     <div id="successMessage" class="success-message hidden">
                         <i class="fas fa-check-circle"></i>
                         <span>Form berhasil dikirim!</span>
@@ -420,6 +245,7 @@
             </div>
         </main>
 
+        <!-- Footer -->
         <footer class="relative bg-black text-gray-300 py-10 mt-16">
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
 
@@ -435,155 +261,14 @@
                 <div class="border-t border-gray-700 my-5 w-2/3 mx-auto"></div>
 
                 <p class="text-xs md:text-sm text-gray-500 hover:text-gray-300 transition duration-300">
-                    &copy; 2025 Tim InnovateIT — Gian, Dedek, Clara, Margareth,
-                    dan Trisna.
+                    &copy; 2025 Tim InnovateIT — Gian, Dedek, Clara, Margareth, dan Trisna.
                     <br class="md:hidden" /> All rights reserved.
                 </p>
             </div>
             <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
         </footer>
 
-        <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-            const btn = document.querySelector('button[aria-label="Toggle navigation"]');
-            if (btn) {
-                const expanded = btn.getAttribute('aria-expanded') === 'true';
-                btn.setAttribute('aria-expanded', (!expanded).toString());
-            }
-        }
-
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const toggleIcon = document.getElementById('passwordToggle');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggleIcon.classList.remove('fa-eye');
-                toggleIcon.classList.add('fa-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                toggleIcon.classList.remove('fa-eye-slash');
-                toggleIcon.classList.add('fa-eye');
-            }
-        }
-
-        // Form Validation
-        const form = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-
-        // Real-time validation
-        document.getElementById('fullName').addEventListener('blur', function() {
-            validateField(this, 'fullNameError', 'Nama harus minimal 3 karakter');
-        });
-
-        document.getElementById('password').addEventListener('blur', function() {
-            validateField(this, 'passwordError', 'Password harus minimal 6 karakter');
-        });
-
-        document.getElementById('message').addEventListener('blur', function() {
-            validateField(this, 'messageError', 'Pesan harus minimal 10 karakter');
-        });
-
-        document.getElementById('email').addEventListener('blur', function() {
-            validateEmail(this);
-        });
-
-        document.getElementById('country').addEventListener('change', function() {
-            validateField(this, 'countryError', 'Pilih negara');
-        });
-
-        function validateField(field, errorId, errorMsg) {
-            const errorElement = document.getElementById(errorId);
-            if (!field.value || (field.minLength && field.value.length < field.minLength)) {
-                errorElement.textContent = errorMsg;
-                errorElement.classList.remove('hidden');
-                field.classList.add('error');
-                return false;
-            } else {
-                errorElement.classList.add('hidden');
-                field.classList.remove('error');
-                return true;
-            }
-        }
-
-        function validateEmail(field) {
-            const errorElement = document.getElementById('emailError');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(field.value)) {
-                errorElement.textContent = 'Email tidak valid';
-                errorElement.classList.remove('hidden');
-                field.classList.add('error');
-                return false;
-            } else {
-                errorElement.classList.add('hidden');
-                field.classList.remove('error');
-                return true;
-            }
-        }
-
-        // Form Submission
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Validate all fields
-            let isValid = true;
-            isValid &= validateField(document.getElementById('fullName'), 'fullNameError', 'Nama harus minimal 3 karakter');
-            isValid &= validateField(document.getElementById('password'), 'passwordError', 'Password harus minimal 6 karakter');
-            isValid &= validateField(document.getElementById('message'), 'messageError', 'Pesan harus minimal 10 karakter');
-            isValid &= validateEmail(document.getElementById('email'));
-            isValid &= validateField(document.getElementById('country'), 'countryError', 'Pilih negara');
-
-            // Check radio
-            const genderSelected = document.querySelector('input[name="gender"]:checked');
-            const genderError = document.getElementById('genderError');
-            if (!genderSelected) {
-                genderError.textContent = 'Pilih jenis kelamin';
-                genderError.classList.remove('hidden');
-                isValid = false;
-            } else {
-                genderError.classList.add('hidden');
-            }
-
-            // Check checkboxes
-            const interestsChecked = document.querySelectorAll('input[name="interests"]:checked');
-            const interestsError = document.getElementById('interestsError');
-            if (interestsChecked.length === 0) {
-                interestsError.textContent = 'Pilih minimal 1 minat';
-                interestsError.classList.remove('hidden');
-                isValid = false;
-            } else {
-                interestsError.classList.add('hidden');
-            }
-
-            if (isValid) {
-                // Log form data
-                console.log({
-                    fullName: document.getElementById('fullName').value,
-                    password: document.getElementById('password').value,
-                    message: document.getElementById('message').value,
-                    gender: genderSelected.value,
-                    interests: Array.from(interestsChecked).map(cb => cb.value),
-                    country: document.getElementById('country').value,
-                    email: document.getElementById('email').value
-                });
-
-                // Show success message
-                successMessage.classList.remove('hidden');
-                successMessage.style.display = 'flex';
-                form.style.opacity = '0.6';
-                form.style.pointerEvents = 'none';
-
-                setTimeout(() => {
-                    form.reset();
-                    form.style.opacity = '1';
-                    form.style.pointerEvents = 'auto';
-                    successMessage.classList.add('hidden');
-                    successMessage.style.display = 'none';
-                }, 2500);
-            }
-        });
-    </script>
+        <!-- Scripts -->
+        <script src="assets/js/form.js"></script>
     </body>
 </html>
