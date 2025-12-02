@@ -9,6 +9,157 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="assets/img/gian.svg" type="image/svg+xml">
+        
+        <!-- TAG CSS (Internal Stylesheet) -->
+        <style>
+            /* Style untuk form container */
+            .form-card {
+                background-color: white;
+                border-radius: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                padding: 2rem;
+            }
+
+            /* Style untuk form group */
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            .form-label {
+                display: block;
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #374151;
+                margin-bottom: 0.5rem;
+            }
+
+            .form-input,
+            .form-textarea,
+            .form-select {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                border: 1px solid #d1d5db;
+                border-radius: 0.5rem;
+                font-family: inherit;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .form-input:focus,
+            .form-textarea:focus,
+            .form-select:focus {
+                outline: none;
+                border-color: #3b82f6;
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            }
+
+            .form-input.error,
+            .form-textarea.error,
+            .form-select.error {
+                border-color: #ef4444;
+                background-color: #fee2e2;
+            }
+
+            .error-text {
+                display: block;
+                color: #ef4444;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+
+            .success-message {
+                background-color: #d1fae5;
+                border: 1px solid #6ee7b7;
+                color: #065f46;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-top: 1.5rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+
+            .btn-group {
+                display: flex;
+                gap: 1rem;
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+
+            .btn {
+                flex: 1;
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            .btn-submit {
+                background-color: #3b82f6;
+                color: white;
+            }
+
+            .btn-submit:hover {
+                background-color: #2563eb;
+                transform: translateY(-2px);
+            }
+
+            .btn-reset {
+                background-color: #6b7280;
+                color: white;
+            }
+
+            .btn-reset:hover {
+                background-color: #4b5563;
+                transform: translateY(-2px);
+            }
+
+            .radio-group,
+            .checkbox-group {
+                margin-top: 0.5rem;
+            }
+
+            .radio-item,
+            .checkbox-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .radio-item label,
+            .checkbox-item label {
+                margin-left: 0.75rem;
+                color: #374151;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .header-form {
+                background: linear-gradient(to bottom right, #1e3a8a, #1e40af, #4f46e5);
+                color: white;
+                padding: 4rem 1rem;
+            }
+
+            .header-form h1 {
+                font-size: 2.25rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            .header-form p {
+                font-size: 1.125rem;
+                opacity: 0.9;
+            }
+        </style>
     </head>
     <body class="bg-gray-50">
         <nav class="bg-white shadow-lg sticky top-0 z-50">
@@ -36,24 +187,24 @@
             </div>
         </nav>
 
-        <header class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-16 px-4">
+        <header class="header-form" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 1rem;">
             <div class="container mx-auto">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: white;">
                     <i class="fas fa-clipboard-list mr-2"></i>Formulir
                 </h1>
-                <p class="text-xl text-blue-100">Isi form dengan lengkap dan benar</p>
+                <p style="font-size: 1.125rem; color: rgba(255,255,255,0.9);">Isi form dengan lengkap dan benar</p>
             </div>
         </header>
 
         <main class="container mx-auto px-4 py-12">
             <div class="max-w-2xl mx-auto">
-                <!-- Form Card -->
-                <div class="bg-white rounded-2xl shadow-lg p-8">
+                <!-- Form Card dengan TAG CSS -->
+                <div class="form-card">
                     <form id="contactForm" class="space-y-6" novalidate>
                         
-                        <!-- (a) TEXT INPUT -->
-                        <div>
-                            <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-2">
+                        <!-- (a) TEXT INPUT dengan TAG CSS -->
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">
                                 <i class="fas fa-user text-blue-600 mr-2"></i>Nama Lengkap
                             </label>
                             <input 
@@ -61,39 +212,39 @@
                                 id="fullName" 
                                 name="fullName"
                                 placeholder="Contoh: Budi Santoso"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                class="form-input"
                                 required
                                 minlength="3"
                             >
-                            <span class="error-text text-red-500 text-sm hidden" id="fullNameError"></span>
+                            <span class="error-text hidden" id="fullNameError"></span>
                         </div>
 
-                        <!-- (b) PASSWORD -->
-                        <div>
-                            <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">
+                        <!-- (b) PASSWORD dengan TAG CSS + Inline CSS -->
+                        <div class="form-group">
+                            <label for="password" class="form-label">
                                 <i class="fas fa-lock text-blue-600 mr-2"></i>Password
                             </label>
-                            <div class="relative">
+                            <div class="relative" style="position: relative;">
                                 <input 
                                     type="password" 
                                     id="password" 
                                     name="password"
                                     placeholder="Minimal 6 karakter"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                    class="form-input"
                                     required
                                     minlength="6"
                                 >
-                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 transition" onclick="togglePassword()" title="Toggle password visibility" aria-label="Toggle password visibility">
+                                <button type="button" class="absolute right-3 top-3 text-gray-500 hover:text-gray-700 transition" onclick="togglePassword()" title="Toggle password visibility" aria-label="Toggle password visibility" style="position: absolute; right: 0.75rem; top: 0.75rem; background: none; border: none; cursor: pointer; padding: 0.5rem;">
                                     <span class="sr-only">Lihat/Sembunyikan Password</span>
                                     <i class="fas fa-eye" id="passwordToggle" aria-hidden="true"></i>
                                 </button>
                             </div>
-                            <span class="error-text text-red-500 text-sm hidden" id="passwordError"></span>
+                            <span class="error-text hidden" id="passwordError"></span>
                         </div>
 
-                        <!-- (c) TEXT AREA -->
-                        <div>
-                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                        <!-- (c) TEXT AREA dengan TAG CSS -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">
                                 <i class="fas fa-comment text-blue-600 mr-2"></i>Pesan
                             </label>
                             <textarea 
@@ -101,20 +252,21 @@
                                 name="message"
                                 placeholder="Tulis pesan Anda di sini... (minimal 10 karakter)"
                                 rows="5"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
+                                class="form-textarea"
                                 required
                                 minlength="10"
+                                style="resize: none;"
                             ></textarea>
-                            <span class="error-text text-red-500 text-sm hidden" id="messageError"></span>
+                            <span class="error-text hidden" id="messageError"></span>
                         </div>
 
-                        <!-- (d) RADIO BUTTONS -->
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">
+                        <!-- (d) RADIO BUTTONS dengan TAG CSS -->
+                        <div class="form-group">
+                            <label class="form-label">
                                 <i class="fas fa-venus-mars text-blue-600 mr-2"></i>Jenis Kelamin
                             </label>
-                            <div class="space-y-2">
-                                <div class="flex items-center">
+                            <div class="radio-group">
+                                <div class="radio-item">
                                     <input 
                                         type="radio" 
                                         id="genderMale" 
@@ -123,9 +275,9 @@
                                         class="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-500"
                                         required
                                     >
-                                    <label for="genderMale" class="ml-3 text-gray-700 cursor-pointer">Laki-laki</label>
+                                    <label for="genderMale">Laki-laki</label>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="radio-item">
                                     <input 
                                         type="radio" 
                                         id="genderFemale" 
@@ -133,19 +285,19 @@
                                         value="female"
                                         class="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-500"
                                     >
-                                    <label for="genderFemale" class="ml-3 text-gray-700 cursor-pointer">Perempuan</label>
+                                    <label for="genderFemale">Perempuan</label>
                                 </div>
                             </div>
-                            <span class="error-text text-red-500 text-sm hidden" id="genderError"></span>
+                            <span class="error-text hidden" id="genderError"></span>
                         </div>
 
-                        <!-- (d) CHECKBOX -->
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-3">
+                        <!-- (d) CHECKBOX dengan TAG CSS -->
+                        <div class="form-group">
+                            <label class="form-label">
                                 <i class="fas fa-tasks text-blue-600 mr-2"></i>Minat (Pilih minimal 1)
                             </label>
-                            <div class="space-y-2">
-                                <div class="flex items-center">
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
                                     <input 
                                         type="checkbox" 
                                         id="interestProgramming" 
@@ -153,9 +305,9 @@
                                         value="programming"
                                         class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                                     >
-                                    <label for="interestProgramming" class="ml-3 text-gray-700 cursor-pointer">Programming</label>
+                                    <label for="interestProgramming">Programming</label>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="checkbox-item">
                                     <input 
                                         type="checkbox" 
                                         id="interestDesign" 
@@ -163,9 +315,9 @@
                                         value="design"
                                         class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                                     >
-                                    <label for="interestDesign" class="ml-3 text-gray-700 cursor-pointer">Design</label>
+                                    <label for="interestDesign">Design</label>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="checkbox-item">
                                     <input 
                                         type="checkbox" 
                                         id="interestDatabase" 
@@ -173,21 +325,21 @@
                                         value="database"
                                         class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                                     >
-                                    <label for="interestDatabase" class="ml-3 text-gray-700 cursor-pointer">Database</label>
+                                    <label for="interestDatabase">Database</label>
                                 </div>
                             </div>
-                            <span class="error-text text-red-500 text-sm hidden" id="interestsError"></span>
+                            <span class="error-text hidden" id="interestsError"></span>
                         </div>
 
-                        <!-- (e) SELECT/DROPDOWN -->
-                        <div>
-                            <label for="country" class="block text-sm font-semibold text-gray-700 mb-2">
+                        <!-- (e) SELECT/DROPDOWN dengan TAG CSS -->
+                        <div class="form-group">
+                            <label for="country" class="form-label">
                                 <i class="fas fa-globe text-blue-600 mr-2"></i>Negara
                             </label>
                             <select 
                                 id="country" 
                                 name="country"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                class="form-select"
                                 required
                             >
                                 <option value="">-- Pilih Negara --</option>
@@ -197,12 +349,12 @@
                                 <option value="thailand">Thailand</option>
                                 <option value="philippines">Filipina</option>
                             </select>
-                            <span class="error-text text-red-500 text-sm hidden" id="countryError"></span>
+                            <span class="error-text hidden" id="countryError"></span>
                         </div>
 
-                        <!-- EMAIL -->
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                        <!-- EMAIL dengan TAG CSS -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">
                                 <i class="fas fa-envelope text-blue-600 mr-2"></i>Email
                             </label>
                             <input 
@@ -210,32 +362,34 @@
                                 id="email" 
                                 name="email"
                                 placeholder="contoh@email.com"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                class="form-input"
                                 required
                             >
-                            <span class="error-text text-red-500 text-sm hidden" id="emailError"></span>
+                            <span class="error-text hidden" id="emailError"></span>
                         </div>
 
-                        <!-- (f)(g) BUTTONS -->
-                        <div class="flex gap-4 pt-4">
+                        <!-- (f)(g) BUTTONS dengan TAG CSS + Inline CSS -->
+                        <div class="btn-group">
                             <button 
                                 type="submit" 
-                                class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2 duration-200"
+                                class="btn btn-submit"
                                 id="submitBtn"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
                             >
                                 <i class="fas fa-paper-plane"></i>Submit
                             </button>
                             <button 
                                 type="reset" 
-                                class="flex-1 bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition flex items-center justify-center gap-2 duration-200"
+                                class="btn btn-reset"
+                                style="background-color: #6b7280;"
                             >
                                 <i class="fas fa-redo"></i>Reset
                             </button>
                         </div>
                     </form>
 
-                    <!-- Success Message -->
-                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center gap-2">
+                    <!-- Success Message dengan TAG CSS + Inline CSS -->
+                    <div id="successMessage" class="success-message hidden" style="display: none; background-color: #d1fae5; border-color: #6ee7b7; color: #065f46;">
                         <i class="fas fa-check-circle"></i>
                         <span>Form berhasil dikirim!</span>
                     </div>
@@ -322,11 +476,11 @@
             if (!field.value || (field.minLength && field.value.length < field.minLength)) {
                 errorElement.textContent = errorMsg;
                 errorElement.classList.remove('hidden');
-                field.classList.add('border-red-500');
+                field.classList.add('error');
                 return false;
             } else {
                 errorElement.classList.add('hidden');
-                field.classList.remove('border-red-500');
+                field.classList.remove('error');
                 return true;
             }
         }
@@ -337,11 +491,11 @@
             if (!emailRegex.test(field.value)) {
                 errorElement.textContent = 'Email tidak valid';
                 errorElement.classList.remove('hidden');
-                field.classList.add('border-red-500');
+                field.classList.add('error');
                 return false;
             } else {
                 errorElement.classList.add('hidden');
-                field.classList.remove('border-red-500');
+                field.classList.remove('error');
                 return true;
             }
         }
@@ -394,6 +548,7 @@
 
                 // Show success message
                 successMessage.classList.remove('hidden');
+                successMessage.style.display = 'flex';
                 form.style.opacity = '0.6';
                 form.style.pointerEvents = 'none';
 
@@ -402,6 +557,7 @@
                     form.style.opacity = '1';
                     form.style.pointerEvents = 'auto';
                     successMessage.classList.add('hidden');
+                    successMessage.style.display = 'none';
                 }, 2500);
             }
         });
